@@ -8,7 +8,7 @@ Console.Title = "PoloTic Cordoba - Tarea 3 - GIACOBINI GASTÓN 2022 - v1.0";
 Console.WindowHeight = 35;
 Console.WindowWidth = 125;
 
-int MATRIX_SIZE = 10;
+int MATRIX_SIZE = 3;
 double[] userNumbers = new double[MATRIX_SIZE];
 
 double totalAccumulated = 0;
@@ -62,16 +62,14 @@ for (int index = 0; index <= userNumbers.Length; index++)
         userNumbers[index] = userNumber;
 
         // En la primer vuelta inicializo ambos con el primer valor obtenido para luego comparar
-        if (index == 0)
-        {
-            biggestNumber = userNumber;
-            smallestNumber = userNumber;
-        }
-        else
+        if (index != 0)
         {
             biggestNumber = (userNumbers[index] > biggestNumber) ? userNumbers[index] : biggestNumber;
             smallestNumber = (userNumbers[index] < smallestNumber) ? userNumbers[index] : smallestNumber;
         }
+        else
+            biggestNumber = smallestNumber = userNumber;
+
 
         totalAccumulated += userNumbers[index];
 
