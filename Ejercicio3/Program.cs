@@ -8,7 +8,7 @@ Console.Title = "PoloTic Cordoba - Tarea 3 - GIACOBINI GASTÓN 2022 - v1.0";
 Console.WindowHeight = 35;
 Console.WindowWidth = 125;
 
-int MATRIX_SIZE = 3;
+int MATRIX_SIZE = 10;
 double[] userNumbers = new double[MATRIX_SIZE];
 
 double totalAccumulated = 0;
